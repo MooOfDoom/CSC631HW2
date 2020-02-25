@@ -1,32 +1,21 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 
-public class Stalker : MonoBehaviour
+public class stalker : MonoBehaviour
 {
-	public Transform player;
-	public Transform overview;
 
-	private Vector3 playerViewOffset;
-	private Quaternion playerViewRotation;
+    public Transform player;
 
-	// Start is called before the first frame update
-	void Start()
-	{
-		playerViewOffset = transform.position - player.transform.position;
-		playerViewRotation = transform.rotation;
-	}
+    public Vector3 offset;
+    // Start is called before the first frame update
+    void Start()
+    {
+        offset = transform.position - player.transform.position;
+    }
 
-	// Update is called once per frame
-	void LateUpdate()
-	{
-		if (Input.GetKey("m"))
-		{
-			transform.position = overview.position;
-			transform.rotation = overview.rotation;
-		}
-		else
-		{
-			transform.position = player.transform.position + playerViewOffset;
-			transform.rotation = playerViewRotation;
-		}
-	}
+    // Update is called once per frame
+    void LateUpdate()
+    {
+        transform.position = player.transform.position + offset;
+    }
 }

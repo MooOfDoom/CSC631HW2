@@ -2,7 +2,7 @@
 using UnityEngine;
 
 
-public class Movement : MonoBehaviour
+public class movement : MonoBehaviour
 {
     public Rigidbody rb; 
     // Start is called before the first frame update
@@ -53,7 +53,7 @@ public class Movement : MonoBehaviour
         }
 
 
-        if(collisionInfo.collider.tag == "Obstacle")
+        if(collisionInfo.collider.name == "Obstacle")
         {
             //Destroy();
 

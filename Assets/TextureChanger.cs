@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TextureChanger : MonoBehaviour
+public class textureChanger : MonoBehaviour
 {
 
     public Material mat;
